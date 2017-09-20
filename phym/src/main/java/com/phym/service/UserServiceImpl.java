@@ -133,6 +133,7 @@ public class UserServiceImpl implements UserService {
 				
 		User user = dao.findUserByPhone(phone);
 		String pwd = NoteUtil.md5(password+"谱华云媒");
+		user.setUser_update_time(new Timestamp(System.currentTimeMillis()));
 		user.setUser_password(pwd);										
 		return user;
 	}

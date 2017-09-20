@@ -73,6 +73,7 @@ function checkPhone(){
 		success:function(result){
 			if(result.status == SUCCESS){
 				//$("#verifyYz").unbind("click");
+				//
 				$(".name_phone").parent().find("label:first").removeClass('hide');
 //				$("#verifyYz").bind("click");
 				$('#verifyYz').bind("click",function(){

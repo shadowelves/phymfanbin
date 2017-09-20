@@ -28,14 +28,29 @@
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/*/*.do"/>
-			
-			
-			<mvc:exclude-mapping path="/login.html"/>
+			<mvc:exclude-mapping path="/user/send.do"/>
+			<mvc:exclude-mapping path="/user/checkphone.do"/>
+			<mvc:exclude-mapping path="/user/checkphone_r.do"/>
+			<mvc:exclude-mapping path="/user/authcode.do"/>
+			<mvc:exclude-mapping path="/user/checkname.do"/>
+			<mvc:exclude-mapping path="/user/register.do"/>
 			<mvc:exclude-mapping path="/user/gglogin.do"/>
+			<mvc:exclude-mapping path="/user/mtlogin.do"/>
+			<mvc:exclude-mapping path="/user/mtlogin.do"/>
+			<mvc:exclude-mapping path="/upload/one.do"/>
 			<!-- ref 引用Bean 的 ID -->
 			<ref bean="accessInterceptor"/>
 		</mvc:interceptor>
 	</mvc:interceptors>
+	<bean id="multipartResolver"   class="org.springframework.web.multipart.commons.CommonsMultipartResolver">    
+        <!-- 设置上传文件的最大尺寸为10MB -->    
+        <property name="maxUploadSize">    
+            <value>1048576000</value>    
+        </property>    
+            <property name="maxInMemorySize">  
+            <value>1024</value>  
+        </property>  
+    </bean> 
 </beans>
 
 

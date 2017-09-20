@@ -83,9 +83,9 @@ function userMTLogin(){
 			dataType:"json",
 			success:function(result){
 				if(result.status == SUCCESS){
-					//alert(123456);
+					alert(123456);
 					var user = result.data;									
-					window.location.href = "log_in.html";										
+					window.location.href = "index.html";										
 				}else{
 					//alert(123);
 					$(".tishi").show().text(result.msg);

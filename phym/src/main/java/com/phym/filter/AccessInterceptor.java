@@ -19,13 +19,13 @@ public class AccessInterceptor implements HandlerInterceptor {
 		//如果已经登录，则通过 返回 true
 		User user=(User)req.getSession().getAttribute("user");
 		System.out.println("user:"+user);
-		if(user==null){
-			String json=
-				"{\"state\":1,\"message\":\"需要登录\"}";
-			res.setContentType("text/html; charset=utf-8");
-			res.getWriter().print(json);
-			return false;
-		}
+//		if(user==null){
+//			String json=
+//				"{\"state\":1,\"message\":\"需要登录\"}";
+//			res.setContentType("text/html; charset=utf-8");
+//			res.getWriter().print(json);
+//			return false;
+//		}
 		return true;
 	}
 

@@ -97,6 +97,7 @@ public class UserController extends BaseController{
 		User user = userService.MTlogin(name, password);
 		if(user!=null){
 			request.getSession().setAttribute("user", user);
+			System.out.println(request.getSession().getAttribute("user"));
 		}
 		return new JsonResult<User>(user);
 	

@@ -3,7 +3,7 @@ package com.phym.entity;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-public class User_Info implements Serializable{
+public class UserInfo implements Serializable{
 	/**
 	 * 
 	 */
@@ -85,7 +85,7 @@ public class User_Info implements Serializable{
 	public void setUser_info_agency_number(int user_info_agency_number) {
 		this.user_info_agency_number = user_info_agency_number;
 	}
-	public User_Info(String user_info_id, String user_id, String user_info_name, String user_info_tel,
+	public UserInfo(String user_info_id, String user_id, String user_info_name, String user_info_tel,
 			String user_info_addr, String user_info_email, String user_info_company, Timestamp user_info_updateTime,
 			String user_info_headimg, String user_info_agency_name, int user_info_agency_number) {
 		super();
@@ -101,7 +101,7 @@ public class User_Info implements Serializable{
 		this.user_info_agency_name = user_info_agency_name;
 		this.user_info_agency_number = user_info_agency_number;
 	}
-	public User_Info() {
+	public UserInfo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}

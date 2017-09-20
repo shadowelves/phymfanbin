@@ -17,10 +17,8 @@ public class User implements Serializable{
 	private Timestamp user_update_time;//更新时间
 	private String user_Phone_num;//手机
 	private Timestamp user_lastlog_time;//最后退出时间
-	
-	
-	
-	
+	private String user_level;//媒体主等级
+	private String user_demo;//闲置字段
 	public String getUser_id() {
 		return user_id;
 	}
@@ -75,13 +73,25 @@ public class User implements Serializable{
 	public void setUser_lastlog_time(Timestamp user_lastlog_time) {
 		this.user_lastlog_time = user_lastlog_time;
 	}
+	public String getUser_level() {
+		return user_level;
+	}
+	public void setUser_level(String user_level) {
+		this.user_level = user_level;
+	}
+	public String getUser_demo() {
+		return user_demo;
+	}
+	public void setUser_demo(String user_demo) {
+		this.user_demo = user_demo;
+	}
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public User(String user_id, String user_nickname, String user_password, int user_type, int user_state,
-			Timestamp user_create_time, Timestamp user_update_time, String user_Phone_num,
-			Timestamp user_lastlog_time) {
+			Timestamp user_create_time, Timestamp user_update_time, String user_Phone_num, Timestamp user_lastlog_time,
+			String user_level, String user_demo) {
 		super();
 		this.user_id = user_id;
 		this.user_nickname = user_nickname;
@@ -92,6 +102,16 @@ public class User implements Serializable{
 		this.user_update_time = user_update_time;
 		this.user_Phone_num = user_Phone_num;
 		this.user_lastlog_time = user_lastlog_time;
+		this.user_level = user_level;
+		this.user_demo = user_demo;
+	}
+	@Override
+	public String toString() {
+		return "User [user_id=" + user_id + ", user_nickname=" + user_nickname + ", user_password=" + user_password
+				+ ", user_type=" + user_type + ", user_state=" + user_state + ", user_create_time=" + user_create_time
+				+ ", user_update_time=" + user_update_time + ", user_Phone_num=" + user_Phone_num
+				+ ", user_lastlog_time=" + user_lastlog_time + ", user_level=" + user_level + ", user_demo=" + user_demo
+				+ "]";
 	}
 	public User(String user_id, String user_nickname, String user_password, int user_type, int user_state,
 			Timestamp user_create_time, String user_Phone_num) {
@@ -106,13 +126,8 @@ public class User implements Serializable{
 	}
 	
 	
-	@Override
-	public String toString() {
-		return "User [user_id=" + user_id + ", user_nickname=" + user_nickname + ", user_password=" + user_password
-				+ ", user_type=" + user_type + ", user_state=" + user_state + ", user_create_time=" + user_create_time
-				+ ", user_update_time=" + user_update_time + ", user_Phone_num=" + user_Phone_num
-				+ ", user_lastlog_time=" + user_lastlog_time + "]";
-	}
+	
+	
 	
 	
 }
